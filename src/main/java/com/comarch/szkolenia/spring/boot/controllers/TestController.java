@@ -10,6 +10,6 @@ public class TestController {
     @RequestMapping(path = "/test", method = RequestMethod.GET)
     public String test() {
         System.out.println("cos dziala !!!");
-        return "jahsgdfjgh";
+        return "index";
     }
 }
