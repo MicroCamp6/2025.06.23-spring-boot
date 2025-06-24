@@ -1,12 +1,13 @@
 package com.comarch.szkolenia.spring.boot.controllers;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class TestController {
 
-    @RequestMapping(path = "/test", method = RequestMethod.GET)
+    @RequestMapping(path = {"/test", "/"}, method = RequestMethod.GET)
     public String test() {
         System.out.println("cos dziala !!!");
         return "index";
@@ -18,7 +19,7 @@ public class TestController {
         System.out.println(name);
         System.out.println(surname);
 
-        return "index";
+        return "redirect:/test";
     }
 
     @RequestMapping(path = "/test2/{imie}/{nazwisko}", method = RequestMethod.GET)
